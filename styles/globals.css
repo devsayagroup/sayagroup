@@ -6,7 +6,9 @@
   --font-style: var(--font-style);
 }
 
-body {
+html {
+  scroll-behavior: smooth;
   background: var(--background);
-  color: var(--foreground);
 }
+
+
