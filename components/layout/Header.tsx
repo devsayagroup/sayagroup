@@ -31,7 +31,7 @@ export default function Header() {
             <Link href="/career">Career</Link>
             <Link
               href="/contact"
-              className="border px-4 py-1 rounded-full hover:bg-black hover:text-white transition"
+              className="border px-4 py-1 rounded-md hover:bg-black hover:text-white transition"
             >
               Contact
             </Link>
@@ -89,7 +89,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="border px-4 py-2 rounded-full text-center"
+                  className="border px-4 py-2 rounded-md text-center"
                 >
                   Contact
                 </Link>
