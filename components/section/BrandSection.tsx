@@ -17,7 +17,7 @@ export default function BrandSection() {
           className="mb-16"
         >
             <span className="text-sm tracking-[0.2em] uppercase text-neutral-600 block">
-                Saya Group Brands
+                Brands
             </span>
 
             <h2 className="mt-4 text-4xl md:text-5xl font-light leading-tight text-neutral-900">

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -14,7 +15,12 @@ export default function Header() {
         <nav className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
           {/* Logo */}
           <Link href="/" className="text-lg font-semibold tracking-wide">
-            SAYA GROUP
+            <Image
+              src="/sayagroup.png"
+              width={100}
+              height={100}
+              alt="Saya Group"
+            />
           </Link>
 
           {/* Desktop Nav */}

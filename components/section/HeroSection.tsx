@@ -1,136 +1,119 @@
-// "use client";
-
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import { useRef } from "react";
-
-// export default function HeroSection() {
-//   const ref = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: ref,
-//     offset: ["start start", "end start"],
-//   });
-
-//   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
-//   return (
-//     <section
-//       ref={ref}
-//       className="relative h-screen w-full overflow-hidden bg-white"
-//     >
-//       {/* <motion.div
-//         style={{ y }}
-//         initial={{ scale: 1.2, opacity: 0 }}
-//         animate={{ scale: 1, opacity: 1 }}
-//         transition={{ duration: 1.8, ease: "easeOut" }}
-//         className="absolute inset-0 bg-cover bg-center"
-//         style={{ backgroundImage: "url('/images/home/hero.jpg')" }}
-//       />
-
-//       <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-white/10"></div> */}
-
-//       {/* CONTENT */}
-//       <motion.div
-//         initial={{ opacity: 0, x: -40 }}
-//         animate={{ opacity: 1, x: 0 }}
-//         transition={{ duration: 1.2, ease: "easeOut" }}
-//         className="relative h-full flex flex-col justify-center px-8 md:px-20 lg:px-32 max-w-3xl"
-//       >
-//         <h1 className="text-[2.8rem] md:text-[3rem] font-light tracking-wide leading-tight text-neutral-900">
-//           Crafting Modern Hospitality
-//         </h1>
-
-//         <p className="mt-6 text-lg md:text-lg text-neutral-700 leading-relaxed max-w-xl">
-//           Saya Group develops fine dining destinations, private clubs, luxury
-//           villas, and artisan coffee experiences built with design, intention
-//           and modern craftsmanship.
-//         </p>
-
-//         <motion.a
-//           href="#brands"
-//           initial={{ opacity: 0, y: 20 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-//           className="mt-10 inline-block text-sm tracking-wide uppercase text-neutral-900 border-b border-neutral-900/40 pb-1 hover:border-neutral-900 transition-all"
-//         >
-//           Discover Our Brands
-//         </motion.a>
-//       </motion.div>
-//     </section>
-//   );
-// }
-
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { heroCarousel } from "@/lib/data-carousel";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 export default function HeroSection() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-
   return (
-    <section
-      ref={ref}
-      className="relative h-screen w-full overflow-hidden bg-white"
-    >
-      {/* <motion.div
-        style={{ y }}
-        initial={{ scale: 1.2, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.8, ease: "easeOut" }}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/home/hero.jpg')" }}
-      />
-
-      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/60 to-transparent" /> */}
-
-      {/* ASYMMETRIC FLOATING SHAPES */}
-      <motion.div
-        initial={{ opacity: 0, x: 40, y: -40 }}
-        animate={{ opacity: 0.5, x: 0, y: 0 }}
-        transition={{ duration: 1.6, ease: "easeOut" }}
-        className="absolute top-20 right-10 w-40 h-40 bg-neutral-200/30 rounded-3xl backdrop-blur-xl rotate-12"
-      />
-
-      <motion.div
-        initial={{ opacity: 0, x: -40, y: 40 }}
-        animate={{ opacity: 0.4, x: 0, y: 0 }}
-        transition={{ duration: 1.8, ease: "easeOut" }}
-        className="absolute bottom-20 left-10 w-56 h-56 bg-neutral-100/40 rounded-full backdrop-blur-xl -rotate-6"
-      />
-
-      {/* CONTENT */}
-      <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative h-full flex flex-col justify-center px-8 md:px-20 lg:px-32 max-w-3xl"
+    <section className="relative w-full h-screen overflow-hidden">
+      <Swiper
+        modules={[Autoplay, Pagination, EffectFade]}
+        effect="fade"
+        loop
+        speed={1200}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+          bulletClass: "hero-bullet",
+          bulletActiveClass: "hero-bullet-active",
+        }}
+        className="w-full h-full"
       >
-        <h1 className="text-[2.8rem] md:text-[3.4rem] font-light tracking-wide leading-tight text-neutral-900">
-          Crafting Modern Hospitality
-        </h1>
+        {heroCarousel.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="relative w-full h-screen">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className="object-cover object-center"
+              />
 
-        <p className="mt-6 text-lg md:text-xl text-neutral-700 leading-relaxed max-w-xl">
-          Saya Group develops fine dining destinations, private clubs, luxury
-          villas, and artisan experiences built with design, intention and
-          modern craftsmanship.
+              <div className="absolute inset-0 bg-black/55" />
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+                <Image
+                  src={item.logo}
+                  alt={item.title}
+                  width={220}
+                  height={220}
+                  priority={i === 0}
+                  sizes="200px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="lg:absolute bottom-10 left-10 z-30 text-white max-w-xs pointer-events-none">
+        <h3 className="text-sm md:text-base font-light uppercase tracking-widest opacity-80">
+          Exclusive Experiences
+        </h3>
+        <p className="text-xs opacity-70 leading-relaxed mt-1">
+          Discover our curated destinations crafted with timeless elegance,
+          refined hospitality, and world-class atmosphere.
         </p>
+      </div>
 
-        <motion.a
-          href="#brands"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="mt-10 inline-block text-sm tracking-wider uppercase text-neutral-900 border-b border-neutral-900/40 pb-1 hover:border-neutral-900 transition-all"
-        >
-          Discover Our Brands
-        </motion.a>
-      </motion.div>
+      <div className="absolute bottom-20 md:bottom-10 right-10 z-30 text-white max-w-xs pointer-events-none text-right">
+        <h3 className="text-sm md:text-base font-bold uppercase tracking-widest opacity-80">
+          Saya Group
+        </h3>
+        <p className="text-xs opacity-70 leading-relaxed mt-1">
+          Home to iconic brands including GoaSaya, One Percent Lounge, and more.
+          A collection built for unforgettable moments.
+        </p>
+      </div>
+
+      {/* BULLET STYLING */}
+      <style jsx global>{`
+        .swiper-pagination {
+          bottom: 35px !important;
+        }
+
+        .hero-bullet {
+          width: 10px;
+          height: 10px;
+          background: rgba(255, 255, 255, 0.35);
+          display: inline-block;
+          border-radius: 50%;
+          margin: 0 6px !important;
+          transition: all 0.3s ease;
+        }
+
+        .hero-bullet-active {
+          background: white !important;
+          width: 12px !important;
+          height: 12px !important;
+        }
+
+        @media (max-width: 768px) {
+          .swiper-pagination {
+            bottom: 25px !important;
+          }
+          .hero-bullet {
+            width: 8px;
+            height: 8px;
+          }
+          .hero-bullet-active {
+            width: 10px !important;
+            height: 10px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

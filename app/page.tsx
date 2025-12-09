@@ -2,6 +2,7 @@ import HeroSection from "@/components/section/HeroSection";
 import AboutSection from "@/components/section/AboutSection";
 import BrandSection from "@/components/section/BrandSection";
 import MediaSection from "@/components/section/MediaSection";
+import BrandHeroCarousel from "@/components/ui/BrandHeroCarousel";
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
     // </div>
     <>
       <HeroSection/>
+      {/* <BrandHeroCarousel/> */}
       <AboutSection/>
       <BrandSection/>
       <MediaSection/>
-
     </>
   );
 }
