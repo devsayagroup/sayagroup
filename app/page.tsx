@@ -11,10 +11,9 @@ export default function Home() {
     // </div>
     <>
       <HeroSection/>
-      {/* <BrandHeroCarousel/> */}
       <AboutSection/>
       <BrandSection/>
-      <MediaSection/>
+      {/* <MediaSection/> */}
     </>
   );
 }

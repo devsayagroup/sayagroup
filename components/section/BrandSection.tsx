@@ -44,9 +44,9 @@ export default function BrandSection() {
 }
 
 
-function BrandCard({ brand }: any) {
+function BrandCard({ brand, index }: any) {
   return (
-    <Link href={`/brands/${brand.slug}`} className="group block w-full">
+    <Link href={`/brands/${brand.slug}`} key={index} className="group block w-full">
       <div className="relative overflow-hidden h-[420px] shadow-sm">
 
         <motion.img

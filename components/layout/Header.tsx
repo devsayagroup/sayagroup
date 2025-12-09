@@ -28,6 +28,7 @@ export default function Header() {
             <Link href="/brands">Brands</Link>
             <Link href="/about">About</Link>
             <Link href="/media">Media</Link>
+            <Link href="/career">Career</Link>
             <Link
               href="/contact"
               className="border px-4 py-1 rounded-full hover:bg-black hover:text-white transition"
