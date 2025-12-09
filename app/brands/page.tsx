@@ -1,14 +1,21 @@
 // app/brands/page.tsx (server)
 import Link from "next/link";
 import { brands } from "@/lib/data-brands";
+import Headline from "@/components/ui/Headline";
 
 export default function BrandsPage() {
 
   return (
-    <main className="max-w-7xl mx-auto px-6 py-32">
-      <h1 className="text-3xl md:text-4xl font-semibold mb-8">Our Brands</h1>
+    <main className="">
+      <Headline
+        title="Our Brands"
+        breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Brands" },
+        ]}
+      />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="px-6 md:px-32 py-22 grid grid-cols-1 md:grid-cols-2 gap-10">
         {brands.map((brand) => (
           <Link
             key={brand.id}
