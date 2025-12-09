@@ -20,10 +20,10 @@ export default function AboutSection() {
               src="/sayagroup.png"
               alt="Saya Group Hospitality"
               className="w-[400px] h-full object-cover"
-              initial={{ scale: 1.15 }}
+              initial={{ scale: 1.05 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 2, ease: "easeOut" }}
+              transition={{ duration: 1, ease: "easeOut" }}
             />
           </div>
         </motion.div>

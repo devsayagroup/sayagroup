@@ -1,65 +1,3 @@
-// export type Brand = {
-//   id: string;
-//   name: string;
-//   slug: string;
-//   shortDescription: string;
-//   description: string;
-//   image: string; // main image
-//   logo: string; // brand logo
-//   location?: string;
-//   website?: string;
-// };
-
-// export const brands: Brand[] = [
-//   {
-//     id: "goasaya",
-//     name: "GoaSaya",
-//     slug: "goasaya",
-//     shortDescription: "Cave-inspired fine dining restaurant in Jakarta.",
-//     description:
-//       "GoaSaya is an immersive fine dining destination designed to resemble a sculpted cave. Located in Jakarta, it blends dramatic architecture with curated tasting menus, handcrafted cocktails and sensory storytelling.",
-//     image: "/onepercent.jpg",
-//     logo: "/brands/logo-goasaya.png",
-//     location: "Jakarta, Indonesia",
-//     website: "https://goasaya.com"
-//   },
-//   {
-//     id: "onepercent",
-//     name: "One Percent",
-//     slug: "one-percent",
-//     shortDescription: "Private club and boutique rooms above GoaSaya.",
-//     description:
-//       "One Percent is a private club concept featuring exclusive lounges, curated musical ambience and boutique rooms. A modern lifestyle destination built for connection, privacy and elevated nightlife.",
-//     image: "/onepercent.jpg",
-//     logo: "/brands/logo-onepercent.png",
-//     location: "Jakarta, Indonesia",
-//     website: "https://onepercent.com"
-//   },
-//   {
-//     id: "nemu-saya-villa",
-//     name: "Nemu Saya Villa",
-//     slug: "nemu-saya-villa",
-//     shortDescription: "A luxury villa retreat surrounded by the beauty of Bali.",
-//     description:
-//       "Nemu Saya Villa is a serene luxury villa in Bali offering spacious suites, private pools and curated services. It is crafted for travelers seeking privacy, comfort and a natural escape.",
-//     image: "/onepercent.jpg",
-//     logo: "/brands/logo-nemu.png",
-//     location: "Bali, Indonesia",
-//     website: "https://nemusaya.com"
-//   },
-//   {
-//     id: "aroma-biji",
-//     name: "Aroma Biji",
-//     slug: "aroma-biji",
-//     shortDescription: "Modern artisan coffee brand celebrating Indonesian coffee.",
-//     description:
-//       "Aroma Biji brings a contemporary approach to Indonesian coffee culture. With artisanal brews, signature blends and warm hospitality, the brand celebrates craftsmanship through every cup.",
-//     image: "/onepercent.jpg",
-//     logo: "/brands/logo-aromabiji.png",
-//     location: "Indonesia",
-//     website: "https://aromabiji.com"
-//   }
-// ];
 
 export type BrandEvent = {
   id: string;
@@ -90,12 +28,15 @@ export type Brand = {
   logo: string;
   location?: string;
   website?: string;
-  whatsHappening?: BrandEvent[];
+  events?: BrandEvent[];
   gallery?: string[];
   contact?: BrandContact;
 };
 
 export const brands: Brand[] = [
+  /* ============================
+    GOASAYA
+  ============================ */
   {
     id: "goasaya",
     name: "GoaSaya",
@@ -108,16 +49,15 @@ export const brands: Brand[] = [
     location: "Jakarta, Indonesia",
     website: "https://goasaya.com",
 
-    // NEW
-    whatsHappening: [
-      {
-        id: "goa-01",
-        title: "Exclusive Tasting Menu Release",
-        date: "2025-03-14",
-        description:
-          "GoaSaya introduces a new seasonal tasting menu inspired by natural elements and modern techniques.",
-        image: "/brands/goasaya/goa1.jpg",
-      },
+    events: [
+      // {
+      //   id: "goa-01",
+      //   title: "Exclusive Tasting Menu Release",
+      //   date: "2025-03-14",
+      //   description:
+      //     "GoaSaya introduces a new seasonal tasting menu inspired by natural elements and modern techniques.",
+      //   image: "/brands/goasaya/goa1.jpg",
+      // },
     ],
 
     gallery: [
@@ -130,12 +70,17 @@ export const brands: Brand[] = [
       address: "Jl. Senopati, South Jakarta",
       contactPerson: "+62 812 3456 7890",
       socials: {
-        instagram: "https://instagram.com/goasaya",
+        instagram: "https://instagram.com/goasaya.jkt",
+        tiktok: "https://tiktok.com/goasaya.jkt",
         website: "https://goasaya.com",
       },
-      rsvp: "https://goasaya.com/reservations",
+      rsvp: "https://booking.chope.co/booking_index?rid=goasayarestaurant2511jkt&source=rest_website_goasayarestaurant&adults=2&lang=en_US&country_code=JAKARTA",
     },
   },
+
+  /* ============================
+    ONE PERCENT
+  ============================ */
 
   {
     id: "onepercent",
@@ -147,16 +92,16 @@ export const brands: Brand[] = [
     image: "/brands/onepercent/op1.jpg",
     logo: "/brands/onepercent/logo-white.png",
     location: "Jakarta, Indonesia",
-    website: "https://onepercent.com",
+    website: "https://onepercentlounge.id",
 
-    whatsHappening: [
-      {
-        id: "op-01",
-        title: "New DJ Residency",
-        description:
-          "Weekly curated soundscapes with international and local DJs.",
-        image: "/brands/onepercent/events/dj.jpg",
-      },
+    events: [
+      // {
+      //   id: "op-01",
+      //   title: "New DJ Residency",
+      //   description:
+      //     "Weekly curated soundscapes with international and local DJs.",
+      //   image: "/brands/onepercent/events/dj.jpg",
+      // },
     ],
 
     gallery: [
@@ -171,9 +116,13 @@ export const brands: Brand[] = [
       socials: {
         instagram: "https://instagram.com/onepercent_jkt",
       },
-      rsvp: "https://onepercent.com/reservations",
+      rsvp: "https://onepercentlounge.id/reservations",
     },
   },
+
+  /* ============================
+    NEMU SAYA
+  ============================ */
 
   {
     id: "nemusaya",
@@ -187,14 +136,14 @@ export const brands: Brand[] = [
     location: "Bali, Indonesia",
     website: "https://nemusaya.com",
 
-    whatsHappening: [
-      {
-        id: "nemu-01",
-        title: "Villa Reopening",
-        description:
-          "Newly renovated suites with improved wellness features and private pool enhancements.",
-        image: "/brands/nemusaya/events/reopening.jpg",
-      },
+    events: [
+      // {
+      //   id: "nemu-01",
+      //   title: "Villa Reopening",
+      //   description:
+      //     "Newly renovated suites with improved wellness features and private pool enhancements.",
+      //   image: "/brands/nemusaya/events/reopening.jpg",
+      // },
     ],
 
     gallery: [
@@ -214,6 +163,9 @@ export const brands: Brand[] = [
     },
   },
 
+  /* ============================
+    AROMA BIJI
+  ============================ */
   {
     id: "aromabiji",
     name: "Aroma Biji",
@@ -226,13 +178,13 @@ export const brands: Brand[] = [
     location: "Indonesia",
     website: "https://aromabiji.com",
 
-    whatsHappening: [
-      {
-        id: "abij-01",
-        title: "New Signature Blend Release",
-        description: "Aroma Biji launches a new Indonesian single-origin blend.",
-        image: "/brands/aromabiji/events/blend.jpg",
-      },
+    events: [
+      // {
+      //   id: "abij-01",
+      //   title: "New Signature Blend Release",
+      //   description: "Aroma Biji launches a new Indonesian single-origin blend.",
+      //   image: "/brands/aromabiji/events/blend.jpg",
+      // },
     ],
 
     gallery: [
@@ -246,8 +198,8 @@ export const brands: Brand[] = [
       contactPerson: "+62 878 3322 4455",
       socials: {
         instagram: "https://instagram.com/aromabiji.id",
-        tiktok: "https://tiktok.com/@aromabiji",
-        website: "https://aromabiji.com",
+        tiktok: "https://tiktok.com/@aromabiji.id",
+        website: "https://aromabiji.co",
       },
       rsvp: "",
     },

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function BrandSection() {
   return (
     <section id="brands" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="px-6 md:px-32">
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -34,7 +34,7 @@ export default function BrandSection() {
 
       </div>
       
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="px-6 md:px-32 grid grid-cols-1 gap-2 md:grid-cols-2">
           {brands.map((brand) => (
             <BrandCard brand={brand} />
           ))}
@@ -47,7 +47,7 @@ export default function BrandSection() {
 function BrandCard({ brand, index }: any) {
   return (
     <Link href={`/brands/${brand.slug}`} key={index} className="group block w-full">
-      <div className="relative overflow-hidden h-[420px] shadow-sm">
+      <div className="relative overflow-hidden h-[420px] rounded-sm shadow-sm">
 
         <motion.img
           src={brand.image}

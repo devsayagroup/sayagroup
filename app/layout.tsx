@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
-
+import GlobalLoader from "@/components/ui/GlobalLoader";
 const styleFont = Quicksand({
   variable: "--font-style",
   subsets: ["latin"],
@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${styleFont.variable} font-style antialiased`}>
+        <GlobalLoader/>
         <Header/>
         <SmoothScroll>{children}</SmoothScroll>
         <Footer/>

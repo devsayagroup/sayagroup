@@ -1,31 +1,3 @@
-// import Image from "next/image";
-
-// export default function Footer() {
-//   return (
-//     <footer className="py-12 border-t border-black/10 bg-white">
-//       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
-        
-//         <div>
-//           <Image src="/sayagroup.png" alt="Saya Group" width={140} height={140} className="mb-8" />
-//           <p className="text-sm opacity-60 mt-1">
-//             Hospitality. Culture. Experiences.
-//           </p>
-//         </div>
-
-//         <div className="flex flex-col gap-2 text-sm opacity-70">
-//           <a href="/brands">Brands</a>
-//           <a href="/media">Media</a>
-//           <a href="/contact">Contact</a>
-//         </div>
-//       </div>
-
-//       <p className="text-center text-xs opacity-60 mt-10">
-//         © {new Date().getFullYear()} Saya Group. All Rights Reserved.
-//       </p>
-//     </footer>
-//   );
-// }
-
 "use client";
 
 import Image from "next/image";
@@ -38,9 +10,9 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}            // fade + slide up smoothly
       viewport={{ once: true, amount: 0.2 }}        // only animate once, trigger early
       transition={{ duration: 1.5, ease: "easeOut" }} // slow luxurious animation
-      className="py-20 border-t border-black/10 bg-white"
+      className="pt-20 pb-8 border-t border-black/10 bg-white"
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="px-6 md:px-32 grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {/* BRAND */}
         <div className="flex flex-col">
@@ -76,8 +48,8 @@ export default function Footer() {
           </h4>
           <p className="text-sm text-neutral-700 leading-relaxed">
             Saya Group Headquarters<br />
-            Jakarta, Indonesia<br />
-            Jl. Example No. 123, SCBD
+            PIK 2, Indonesia<br />
+            Jl. Example No. 123
           </p>
         </div>
 
@@ -90,14 +62,14 @@ export default function Footer() {
             <li>
               Email:{" "}
               <a href="mailto:hello@sayagroup.com" className="hover:text-black transition">
-                hello@sayagroup.com
+                hello@sayagroup.id
               </a>
             </li>
-            <li>Phone: <span className="text-neutral-700">+62 812 3456 7890</span></li>
+            <li>Phone: <span className="text-neutral-700">+62 812 1234 1234</span></li>
             <li>
               Instagram:{" "}
-              <a href="https://instagram.com/sayagroup" className="hover:text-black transition">
-                @sayagroup
+              <a href="https://instagram.com/sayagroup.id" className="hover:text-black transition">
+                @sayagroup.id
               </a>
             </li>
           </ul>

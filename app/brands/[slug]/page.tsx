@@ -32,6 +32,7 @@ import BrandAbout from "@/components/brandSection/BrandAbout";
 import BrandEvents from "@/components/brandSection/BrandEvents";
 import BrandGallery from "@/components/brandSection/BrandGallery";
 import BrandContact from "@/components/brandSection/BrandContact";
+import BrandAnother from "@/components/brandSection/BrandAnother";
 
 type Params = {
   params: Promise<{ slug: string }>;
@@ -50,6 +51,7 @@ export default async function BrandPage({ params }: Params) {
       <BrandEvents brand={brand} />
       <BrandGallery brand={brand} />
       <BrandContact brand={brand} />
+      <BrandAnother allBrands={brands} currentSlug={slug}/>
     </div>
   );
 }
