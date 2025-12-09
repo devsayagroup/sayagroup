@@ -39,18 +39,26 @@ export default function HeroSection() {
                 sizes="100vw"
                 className="object-cover object-center"
               />
-
               <div className="absolute inset-0 bg-black/55" />
-
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+              <div className="absolute inset-0 flex flex-row flex-wrap sm:flex-nowrap gap-8 md:gap-12 items-center justify-center text-center text-white px-6">
+                <Image
+                  src="/sayagroupnew.png"
+                  alt="Saya Group"
+                  width={160}
+                  height={160}
+                  priority={i === 0}
+                  sizes="(max-width: 640px) 120px, 160px"
+                  className="object-contain w-24 sm:w-40"
+                />
+                <div className="bg-white h-12 sm:h-24 w-px" />
                 <Image
                   src={item.logo}
                   alt={item.title}
-                  width={220}
-                  height={220}
+                  width={120}
+                  height={120}
                   priority={i === 0}
-                  sizes="200px"
-                  className="object-contain"
+                  sizes="(max-width: 640px) 100px, 120px"
+                  className="object-contain w-20 sm:w-32"
                 />
               </div>
             </div>
