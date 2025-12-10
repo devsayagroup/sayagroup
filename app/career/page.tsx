@@ -1,7 +1,18 @@
+import Headline from "@/components/ui/Headline";
+
 export default function CareerPage() {
   return (
-    <div className="flex justify-center py-32">
-      <h1 className="text-4xl font-bold">Career</h1>
-    </div>
+    <>
+        <Headline
+            title="Career"
+            breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Career" },
+            ]}
+        />
+        <div className="flex justify-center py-32">
+        </div>
+    
+    </>
   );
 }

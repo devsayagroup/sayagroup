@@ -1,8 +1,18 @@
+import Headline from "@/components/ui/Headline";
+
 export default function Contact() {
   return (
-    <div className="py-32">
-      <h1>Contact</h1>
-      <p>This is the contact page.</p>
-    </div>
+    <>
+        <Headline
+            title="Contact"
+            breadcrumbs={[
+            { label: "Home", href: "/" },
+            { label: "Contact" },
+            ]}
+        />
+        <div className="flex justify-center py-32">
+        </div>
+    </>
+     
   );
 }

@@ -5,11 +5,10 @@ import Link from "next/link";
 
 type Props = {
   allBrands: any[];
-  currentSlug: string; // brand.slug from params
+  currentSlug: string; 
 };
 
 export default function BrandAnother({ allBrands, currentSlug }: Props) {
-  // Filter out current brand
   const otherBrands = allBrands.filter((b) => b.slug !== currentSlug);
 
   if (otherBrands.length === 0) return null;
