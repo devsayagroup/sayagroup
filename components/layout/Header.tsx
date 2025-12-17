@@ -16,7 +16,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="text-lg font-semibold tracking-wide">
             <Image
-              src="/sayagroup.png"
+              src="/sayagroup-black.png"
               width={100}
               height={100}
               alt="Saya Group"
