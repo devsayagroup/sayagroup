@@ -23,7 +23,7 @@ export default function BrandAnother({ allBrands, currentSlug }: Props) {
             {otherBrands.map((brand) => (
             <Link
                 key={brand.slug}
-                href={`/brands/${brand.slug}`}
+                href={`/${brand.slug}`}
                 className="group cursor-pointer"
             >
                 <div className="relative w-full h-64 overflow-hidden rounded-md bg-neutral-100">

@@ -19,7 +19,7 @@ export default function BrandsPage() {
         {brands.map((brand) => (
           <Link
             key={brand.id}
-            href={`/brands/${brand.slug}`}
+            href={`/${brand.slug}`}
             className="group block rounded-md overflow-hidden"
           >
             <div className="relative h-72 bg-gray-100">
