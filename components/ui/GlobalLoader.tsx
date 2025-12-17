@@ -34,7 +34,7 @@ export default function GlobalLoader() {
                 transition={{ duration: 0.5 }}
             >
                 <Image
-                src="/sayagroup.png"
+                src="/sayagroup-black.png"
                 width={150}
                 height={150}
                 alt="Sayagroup"

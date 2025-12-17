@@ -23,7 +23,7 @@ export default function BrandContact({ brand }: Props) {
         <div className="my-12 md:my-16 mx-auto w-32 h-[1px] bg-gradient-to-r from-transparent via-[#d4c49e] to-transparent" />
         
         <div className="
-          grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16
+          grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8
           items-start
           text-neutral-300 text-base md:text-lg
         ">
@@ -51,12 +51,12 @@ export default function BrandContact({ brand }: Props) {
               Socials
             </p>
 
-            <div className="flex flex-col md:flex-row gap-4 space-y-2">
+            <div className="flex flex-col md:flex-row gap-4">
               {c.socials?.instagram && (
                 <a
                   href={c.socials.instagram}
                   target="_blank"
-                  className="hover:text-[#d4c49e] transition-colors"
+                  className="hover:text-[#d4c49e] border border-gray-200 rounded-full px-4 py-1 transition-colors"
                 >
                   Instagram
                 </a>
@@ -65,7 +65,7 @@ export default function BrandContact({ brand }: Props) {
                 <a
                   href={c.socials.tiktok}
                   target="_blank"
-                  className="hover:text-[#d4c49e] transition-colors"
+                  className="hover:text-[#d4c49e] border border-gray-200 rounded-full px-4 py-1 transition-colors"
                 >
                   Tiktok
                 </a>
@@ -74,7 +74,7 @@ export default function BrandContact({ brand }: Props) {
                 <a
                   href={c.socials.website}
                   target="_blank"
-                  className="hover:text-[#d4c49e] transition-colors"
+                  className="hover:text-[#d4c49e] border border-gray-200 rounded-full px-4 py-1 transition-colors"
                 >
                   Website
                 </a>

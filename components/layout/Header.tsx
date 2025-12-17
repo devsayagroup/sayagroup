@@ -11,8 +11,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-999 bg-white backdrop-blur-xl border-b border-black/10">
-        <nav className="flex items-center justify-between py-4 px-6 md:px-32">
+      <header className="fixed top-0 left-0 w-full z-99 bg-white backdrop-blur-xl border-b border-black/10">
+        <nav className="flex items-center justify-between py-2 px-6 md:px-32">
           {/* Logo */}
           <Link href="/" className="text-lg font-semibold tracking-wide">
             <Image
@@ -63,7 +63,7 @@ export default function Header() {
 
             {/* Drawer */}
             <motion.div
-              className="fixed right-0 top-0 h-full w-72 bg-white shadow-xl z-50 p-6 flex flex-col"
+              className="fixed right-0 top-0 h-full w-72 bg-white shadow-xl z-999 p-6 flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -76,7 +76,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav className="flex flex-col gap-6 text-lg">
+              <nav className="flex flex-col gap-6 mt-4 text-lg">
                 <Link href="/brands" onClick={() => setOpen(false)}>
                   Brands
                 </Link>
@@ -85,6 +85,9 @@ export default function Header() {
                 </Link>
                 <Link href="/media" onClick={() => setOpen(false)}>
                   Media
+                </Link>
+                <Link href="/career" onClick={() => setOpen(false)}>
+                  Career
                 </Link>
                 <Link
                   href="/contact"

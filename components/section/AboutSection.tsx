@@ -17,7 +17,7 @@ export default function AboutSection() {
         >
           <div className="bg-white overflow-hidden flex justify-center py-20 px-8 items-center rounded-md shadow-sm">
             <motion.img
-              src="/sayagroup.png"
+              src="/sayagroup-black.png"
               alt="Saya Group Hospitality"
               className="w-[400px] h-full object-cover"
               initial={{ scale: 1.05 }}

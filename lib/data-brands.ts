@@ -67,8 +67,8 @@ export const brands: Brand[] = [
     ],
 
     contact: {
-      address: "Jl. Senopati, South Jakarta",
-      contactPerson: "+62 812 3456 7890",
+      address: "Entertainment District, PIK 2",
+      contactPerson: "+62 812 1234 1111",
       socials: {
         instagram: "https://instagram.com/goasaya.jkt",
         tiktok: "https://tiktok.com/goasaya.jkt",
@@ -111,10 +111,11 @@ export const brands: Brand[] = [
     ],
 
     contact: {
-      address: "Above GoaSaya, Senopati, Jakarta",
+      address: "Entertainment District, PIK 2",
       contactPerson: "+62 811 9988 2211",
       socials: {
         instagram: "https://instagram.com/onepercent_jkt",
+        website: "https://onepercent-three.vercel.app",
       },
       rsvp: "https://onepercentlounge.id/reservations",
     },

@@ -17,7 +17,7 @@ export default function Footer() {
         {/* BRAND */}
         <div className="flex flex-col">
           <Image
-            src="/sayagroup.png"
+            src="/sayagroup-black.png"
             alt="Saya Group"
             width={150}
             height={150}
