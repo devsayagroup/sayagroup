@@ -26,7 +26,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8 justify-center items-center text-sm font-medium">
             <Link href="/brands">Brands</Link>
-            <Link href="/about">About</Link>
+            {/* <Link href="/about">About</Link> */}
             <Link href="/media">Media</Link>
             <Link href="/career">Career</Link>
             <Link
@@ -80,9 +80,9 @@ export default function Header() {
                 <Link href="/brands" onClick={() => setOpen(false)}>
                   Brands
                 </Link>
-                <Link href="/about" onClick={() => setOpen(false)}>
+                {/* <Link href="/about" onClick={() => setOpen(false)}>
                   About
-                </Link>
+                </Link> */}
                 <Link href="/media" onClick={() => setOpen(false)}>
                   Media
                 </Link>

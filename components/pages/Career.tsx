@@ -20,7 +20,6 @@ export default function CareerList({ careers }: Props) {
           </p>
         </div> */}
 
-        {/* Jobs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {careers.map((job) => (
             <article

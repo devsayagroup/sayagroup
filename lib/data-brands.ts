@@ -81,7 +81,6 @@ export const brands: Brand[] = [
   /* ============================
     ONE PERCENT
   ============================ */
-
   {
     id: "onepercent",
     name: "One Percent",
@@ -89,7 +88,7 @@ export const brands: Brand[] = [
     shortDescription: "Private club and boutique rooms above GoaSaya.",
     description:
       "One Percent is a private club concept featuring exclusive lounges, curated musical ambience and boutique rooms. A modern lifestyle destination built for connection, privacy and elevated nightlife.",
-    image: "/brands/onepercent/op1.jpg",
+    image: "/brands/onepercent/op-stair.JPG",
     logo: "/brands/onepercent/logo-white.png",
     location: "Jakarta, Indonesia",
     website: "https://onepercentlounge.id",
@@ -105,9 +104,9 @@ export const brands: Brand[] = [
     ],
 
     gallery: [
-      "/brands/onepercent/op1.jpg",
-      "/brands/onepercent/op2.jpg",
-      "/brands/onepercent/op3.jpg",
+      "/brands/onepercent/op7.jpg",
+      "/brands/onepercent/op4.jpg",
+      "/brands/onepercent/op6.jpg",
     ],
 
     contact: {
