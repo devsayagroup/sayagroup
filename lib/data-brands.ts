@@ -44,7 +44,7 @@ export const brands: Brand[] = [
     shortDescription: "Cave-inspired fine dining restaurant in Jakarta.",
     description:
       "GoaSaya is an immersive fine dining destination designed to resemble a sculpted cave. Located in Jakarta, it blends dramatic architecture with curated tasting menus, handcrafted cocktails and sensory storytelling.",
-    image: "/brands/goasaya/goa6.JPG",
+    image: "/brands/goasaya/main.jpeg",
     logo: "/brands/goasaya/logo-white.png",
     location: "Jakarta, Indonesia",
     website: "https://goasaya.com",
@@ -61,9 +61,9 @@ export const brands: Brand[] = [
     ],
 
     gallery: [
-      "/brands/goasaya/goa1.jpg",
-      "/brands/goasaya/goa2.jpg",
-      "/brands/goasaya/goa3.jpg",
+      "/brands/goasaya/glass.jpeg",
+      "/brands/goasaya/main-2.jpeg",
+      "/brands/goasaya/hole.jpeg",
     ],
 
     contact: {
@@ -88,7 +88,7 @@ export const brands: Brand[] = [
     shortDescription: "Private club and boutique rooms above GoaSaya.",
     description:
       "One Percent is a private club concept featuring exclusive lounges, curated musical ambience and boutique rooms. A modern lifestyle destination built for connection, privacy and elevated nightlife.",
-    image: "/brands/onepercent/op-stair.JPG",
+    image: "/brands/onepercent/inner-circle.png",
     logo: "/brands/onepercent/logo-white.png",
     location: "Jakarta, Indonesia",
     website: "https://onepercentlounge.id",

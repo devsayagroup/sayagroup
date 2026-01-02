@@ -10,7 +10,7 @@ export const heroCarousel = [
     logo: "/brands/goasaya/logo-white.png",
   },
   {
-    image: "/brands/onepercent/op1.jpg",
+    image: "/brands/onepercent/inner-circle.png",
     title: "One Percent Lounge",
     logo: "/brands/onepercent/logo-white.png",
   },
