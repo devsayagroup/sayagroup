@@ -47,9 +47,9 @@ export default function Footer() {
             Address
           </h4>
           <p className="text-sm text-neutral-700 leading-relaxed">
-            Saya Group Headquarters<br />
-            PIK 2, Indonesia<br />
-            Jl. Example No. 123
+            Saya Group <br />
+            Ruko La Riviera, PIK 2 <br />
+            Tangerang, Indonesia
           </p>
         </div>
 
@@ -61,8 +61,8 @@ export default function Footer() {
           <ul className="space-y-1 text-sm text-neutral-700">
             <li>
               Email:{" "}
-              <a href="mailto:hello@sayagroup.com" className="hover:text-black transition">
-                hello@sayagroup.id
+              <a href="mailto:business@sayagroup.com" className="hover:text-black transition">
+                business@sayagroup.id
               </a>
             </li>
             <li>Phone: <span className="text-neutral-700">+62 812 1234 1234</span></li>

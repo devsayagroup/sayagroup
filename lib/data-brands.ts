@@ -68,7 +68,7 @@ export const brands: Brand[] = [
 
     contact: {
       address: "Entertainment District, PIK 2",
-      contactPerson: "+62 812 1234 1111",
+      contactPerson: "+62 813 3838 2845",
       socials: {
         instagram: "https://instagram.com/goasaya.jkt",
         tiktok: "https://tiktok.com/goasaya.jkt",
@@ -111,7 +111,7 @@ export const brands: Brand[] = [
 
     contact: {
       address: "Entertainment District, PIK 2",
-      contactPerson: "+62 811 9988 2211",
+      contactPerson: "+62 812 1414 4883",
       socials: {
         instagram: "https://instagram.com/onepercent_jkt",
         website: "https://onepercent-three.vercel.app",
@@ -153,7 +153,7 @@ export const brands: Brand[] = [
     ],
 
     contact: {
-      address: "Ubud, Bali",
+      address: "Bali",
       contactPerson: "+62 877 5566 8899",
       socials: {
         instagram: "https://instagram.com/nemusaya",
