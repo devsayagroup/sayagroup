@@ -1,5 +1,6 @@
 import Headline from "@/components/ui/Headline";
 import type { Metadata } from "next";
+import ContactPage from "@/components/pages/Contact";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -23,8 +24,7 @@ export default function Contact() {
             { label: "Contact" },
             ]}
         />
-        <div className="flex justify-center py-32">
-        </div>
+        <ContactPage/>
     </>
      
   );

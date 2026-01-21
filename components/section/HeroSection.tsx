@@ -44,16 +44,16 @@ export default function HeroSection() {
                 
                   {/* Brand strip (glass) */}
                   <div className="mt-14 md:mt-16">
-                    <div className="w-full rounded-xl border border-white/15 bg-white/5 backdrop-blur-md px-12 py-6">
-                      <div className="flex flex-wrap items-center justify-between gap-12">
+                    <div className="w-full rounded-xl border border-white/15 bg-white/5 backdrop-blur-md px-8 md:px-12 py-4">
+                      <div className="flex flex-wrap items-center justify-between gap-8 md:gap-12">
                         <Image
                           src="/sayagroupnew.png"
                           alt="Saya Group"
-                          width={140}
-                          height={140}
+                          width={120}
+                          height={120}
                           priority={i === 0}
                           sizes="(max-width: 640px) 120px, 160px"
-                          className="object-contain w-22 sm:w-40"
+                          className="object-contain w-22 sm:w-36"
                         />
                         <div className="bg-white h-12 sm:h-22 w-px" />
                         <Image
@@ -63,7 +63,7 @@ export default function HeroSection() {
                           height={100}
                           priority={i === 0}
                           sizes="(max-width: 640px) 100px, 120px"
-                          className="object-contain w-20 sm:w-32"
+                          className="object-contain w-20 sm:w-30"
                         />
                       </div>
                     </div>

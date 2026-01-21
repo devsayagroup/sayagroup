@@ -26,10 +26,9 @@ export default function BrandGallery({ brand }: Props) {
         ))}
       </div>
 
-      {/* MODAL */}
       {active && (
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-999 flex items-center justify-center"
           onClick={() => setActive(null)}
         >
           <div className="relative w-[90%] h-[80vh] max-w-4xl">

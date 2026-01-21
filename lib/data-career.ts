@@ -1,5 +1,3 @@
-// lib/data-career.ts
-
 export type Career = {
   id: string;
   title: string;
@@ -38,7 +36,7 @@ export const careers: Career[] = [
       "Bachelor’s degree in Finance, Accounting, or related field",
       "Strong communication skills and ability to work closely with management",
     ],
-    applyEmail: "careers@sayagroup.com",
+    applyEmail: "career@sayagroup.id",
   },
 
   {
@@ -66,6 +64,6 @@ export const careers: Career[] = [
       "Bachelor’s degree in HR, Business Administration, or related field",
       "Ability to work closely with leadership and cross-functional teams",
     ],
-    applyEmail: "careers@sayagroup.com",
+    applyEmail: "career@sayagroup.id",
   },
 ];

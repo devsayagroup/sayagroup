@@ -27,13 +27,13 @@ export default function Header() {
           <div className="hidden md:flex gap-8 justify-center items-center text-sm font-medium">
             <Link href="/about">About</Link>
             <Link href="/brands">Brands</Link>
-            <Link href="/media">Media</Link>
+            {/* <Link href="/media">Media</Link> */}
             <Link href="/career">Career</Link>
             <Link
               href="/contact"
-              className="border px-4 py-1 rounded-md hover:bg-black hover:text-white transition"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-950 text-white px-6 py-3 text-sm tracking-wide hover:opacity-90 transition"
             >
-              Contact
+              Contact <span className="ml-2">→</span>
             </Link>
           </div>
 
@@ -83,18 +83,18 @@ export default function Header() {
                 <Link href="/brands" onClick={() => setOpen(false)}>
                   Brands
                 </Link>
-                <Link href="/media" onClick={() => setOpen(false)}>
+                {/* <Link href="/media" onClick={() => setOpen(false)}>
                   Media
-                </Link>
+                </Link> */}
                 <Link href="/career" onClick={() => setOpen(false)}>
                   Career
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="border px-4 py-2 rounded-md text-center"
+                  className="inline-flex items-center justify-center rounded-full bg-neutral-950 text-white px-6 py-3 text-sm tracking-wide hover:opacity-90 transition"
                 >
-                  Contact
+                 Contact <span className="ml-2">→</span>
                 </Link>
               </nav>
             </motion.div>
