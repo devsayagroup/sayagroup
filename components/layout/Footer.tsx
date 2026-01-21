@@ -34,8 +34,9 @@ export default function Footer() {
             Navigation
           </h4>
           <ul className="space-y-2 text-sm text-neutral-700">
+            <li><a href="/about" className="hover:text-neutral-900 transition">About</a></li>
             <li><a href="/brands" className="hover:text-neutral-900 transition">Brands</a></li>
-            <li><a href="/media" className="hover:text-neutral-900 transition">Media</a></li>
+            {/* <li><a href="/media" className="hover:text-neutral-900 transition">Media</a></li> */}
             <li><a href="/career" className="hover:text-neutral-900 transition">Career</a></li>
             <li><a href="/contact" className="hover:text-neutral-900 transition">Contact</a></li>
           </ul>
