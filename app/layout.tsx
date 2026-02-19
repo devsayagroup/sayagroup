@@ -6,7 +6,8 @@ import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import GlobalLoader from "@/components/ui/GlobalLoader";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sayagroup.id"),
@@ -114,6 +115,7 @@ export default function RootLayout({
           }}
         />
       </head>
+      <GoogleAnalytics gaId={`${GA_ID}`} />
       <body className={`${styleFont.variable} font-style antialiased`}>
         <ScrollToTop/>
         <GlobalLoader/>
