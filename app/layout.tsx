@@ -6,7 +6,8 @@ import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import GlobalLoader from "@/components/ui/GlobalLoader";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
+
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
@@ -115,7 +116,24 @@ export default function RootLayout({
           }}
         />
       </head>
-      <GoogleAnalytics gaId={`${GA_ID}`} />
+      {GA_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { send_page_view: false }, {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        ) : null}
       <body className={`${styleFont.variable} font-style antialiased`}>
         <ScrollToTop/>
         <GlobalLoader/>
