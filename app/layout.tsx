@@ -7,8 +7,7 @@ import SmoothScroll from "@/components/ui/SmoothScroll";
 import GlobalLoader from "@/components/ui/GlobalLoader";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import Script from "next/script";
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sayagroup.id"),
@@ -80,6 +79,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
       <head>
@@ -116,7 +118,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      {GA_ID ? (
+      <body className={`${styleFont.variable} font-style antialiased`}>
+        {GA_ID ? (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
@@ -134,7 +137,8 @@ export default function RootLayout({
             </Script>
           </>
         ) : null}
-      <body className={`${styleFont.variable} font-style antialiased`}>
+        <GoogleAnalytics gaId={`${GA_ID}`} />
+
         <ScrollToTop/>
         <GlobalLoader/>
         <Header/>
