@@ -94,8 +94,8 @@ export default function ContactPage() {
 
                 <div className="mt-8 space-y-6">
                   <InfoRow label="General Inquiries">
-                    <a className="text-neutral-900 hover:underline" href="mailto:hello@sayagroup.id">
-                      hello@sayagroup.id
+                    <a className="text-neutral-900 hover:underline" href="mailto:admin@sayagroup.id">
+                      admin@sayagroup.id
                     </a>
                   </InfoRow>
 
@@ -105,15 +105,9 @@ export default function ContactPage() {
                     </a>
                   </InfoRow>
 
-                  {/* <InfoRow label="Press / Media">
-                    <a className="text-neutral-900 hover:underline" href="mailto:press@sayagroup.com">
-                      press@sayagroup.com
-                    </a>
-                  </InfoRow> */}
-
                   <InfoRow label="Phone / WhatsApp">
                     <a className="text-neutral-900 hover:underline" href="tel:+620000000000">
-                      +62 000-0000-0000
+                      +62 813-1801-269
                     </a>
                   </InfoRow>
 
@@ -133,13 +127,13 @@ export default function ContactPage() {
 
                 <div className="mt-10 flex flex-wrap gap-3">
                   <a
-                    href="https://wa.me/620000000000"
+                    href="https://wa.me/628131801269"
                     className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm tracking-wide text-neutral-900 hover:border-neutral-900/60 transition"
                   >
                     WhatsApp <span className="ml-2">→</span>
                   </a>
                   <a
-                    href="mailto:business@sayagroup.id"
+                    href="mailto:admin@sayagroup.id"
                     className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-5 py-2.5 text-sm tracking-wide text-white hover:opacity-90 transition"
                   >
                     Email Us
@@ -259,9 +253,6 @@ export default function ContactPage() {
                   </div>
                 </form>
               </div>
-
-              {/* Small note card */}
-             
             </motion.div>
           </div>
         </div>

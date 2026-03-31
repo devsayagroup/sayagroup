@@ -23,8 +23,7 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex gap-8 justify-center items-center text-sm font-medium">
+          <div className="hidden md:flex gap-8 justify-center items-center text-sm font-medium uppercase">
             <Link href="/about">About</Link>
             <Link href="/brands">Brands</Link>
             {/* <Link href="/media">Media</Link> */}
@@ -76,7 +75,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav className="flex flex-col gap-6 mt-4 text-lg">
+              <nav className="flex flex-col gap-6 font-light text-black/80 mt-4 text-lg">
                 <Link href="/about" onClick={() => setOpen(false)}>
                   About
                 </Link>

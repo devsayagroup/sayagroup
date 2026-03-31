@@ -15,11 +15,11 @@ export default function Headline({
 }: HeadlineProps) {
   return (
     <div className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-black/90" />
-        <div
-            className="absolute inset-0 opacity-10 bg-center bg-cover"
-            style={{ backgroundImage: `url(${pattern})` }}
-        />
+      <div className="absolute inset-0 bg-black/90" />
+      <div
+          className="absolute inset-0 opacity-10 bg-center bg-cover"
+          style={{ backgroundImage: `url(${pattern})` }}
+      />
       <div className="relative flex flex-col items-center text-center py-16 px-4 max-w-4xl mx-auto text-white">
         <div className="mt-16 mb-4 flex items-center gap-2 text-sm text-gray-200">
           {breadcrumbs.map((item, i) => (

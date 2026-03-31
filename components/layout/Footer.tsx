@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <motion.footer
-      initial={{ opacity: 0, y: 80 }}               // start lower = parallax feel
-      whileInView={{ opacity: 1, y: 0 }}            // fade + slide up smoothly
-      viewport={{ once: true, amount: 0.2 }}        // only animate once, trigger early
-      transition={{ duration: 1.5, ease: "easeOut" }} // slow luxurious animation
+      initial={{ opacity: 0, y: 80 }}               
+      whileInView={{ opacity: 1, y: 0 }}            
+      viewport={{ once: true, amount: 0.2 }}        
+      transition={{ duration: 1.5, ease: "easeOut" }} 
       className="pt-20 pb-8 border-t border-black/10 bg-white"
     >
       <div className="px-6 md:px-32 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -62,11 +62,11 @@ export default function Footer() {
           <ul className="space-y-1 text-sm text-neutral-700">
             <li>
               Email:{" "}
-              <a href="mailto:business@sayagroup.com" className="hover:text-black transition">
-                business@sayagroup.id
+              <a href="mailto:admin@sayagroup.id" className="hover:text-black transition">
+                admin@sayagroup.id
               </a>
             </li>
-            <li>Phone: <span className="text-neutral-700">+62 812 1234 1234</span></li>
+            <li>Phone: <span className="text-neutral-700">+62 813 1801 269</span></li>
             <li>
               Instagram:{" "}
               <a href="https://instagram.com/sayagroup.id" className="hover:text-black transition">

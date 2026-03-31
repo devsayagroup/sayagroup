@@ -1,72 +1,35 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Quicksand, Spline_Sans } from "next/font/google";
 import "@/styles/globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import SmoothScroll from "@/components/ui/SmoothScroll";
-import GlobalLoader from "@/components/ui/GlobalLoader";
-import ScrollToTop from "@/components/ui/ScrollToTop";
-import Script from "next/script";
+import ClientLayout from "./layout-client";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sayagroup.id"),
-
   title: {
     default: "Saya Group | Hospitality & Lifestyle Group",
     template: "%s | Saya Group",
   },
-
   description:
     "Saya Group is a hospitality-driven lifestyle company based in Jakarta, operating premium brands across dining, coffee, nightlife, craftsmanship, and luxury stays.",
-
   applicationName: "Saya Group",
-
   keywords: [
-    "Saya Group",
-    "Hospitality Group Jakarta",
-    "Lifestyle Group Indonesia",
-    "Restaurant Group Jakarta",
-    "Luxury Hospitality Indonesia",
-    "GoaSaya",
-    "One Percent Lounge",
-    "Aroma Biji",
+    "Saya Group", "Hospitality Group Jakarta", "Lifestyle Group Indonesia",
+    "Restaurant Group Jakarta", "Luxury Hospitality Indonesia",
+    "GoaSaya", "One Percent Lounge", "Aroma Biji",
   ],
-
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sayagroup.id",
     siteName: "Saya Group",
-    title: "Saya Group | Hospitality & Lifestyle Group",
-    description:
-      "A hospitality-driven lifestyle group based in Jakarta, operating premium dining, lifestyle, and craftsmanship brands.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Saya Group",
-      },
-    ],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Saya Group" }],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Saya Group | Hospitality & Lifestyle Group",
-    description:
-      "Hospitality-driven lifestyle group based in Jakarta.",
     images: ["/og-image.jpg"],
   },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
+  robots: { index: true, follow: true, googleBot: {index: true, follow: true} },
 };
 
 const styleFont = Quicksand({
@@ -74,13 +37,14 @@ const styleFont = Quicksand({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
 
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const textFont = Spline_Sans({
+  variable: "--font-text",
+  subsets: ["latin"],
+});
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
   return (
     <html lang="en">
@@ -101,6 +65,7 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Navigation Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -118,32 +83,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${styleFont.variable} font-style antialiased`}>
-        {GA_ID ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-init" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', { send_page_view: false }, {
-                  page_path: window.location.pathname,
-                });
-              `}
-            </Script>
-          </>
-        ) : null}
-        <GoogleAnalytics gaId={`${GA_ID}`} />
-
-        <ScrollToTop/>
-        <GlobalLoader/>
-        <Header/>
-        <SmoothScroll>{children}</SmoothScroll>
-        <Footer/>
+      <body className={`${styleFont.variable} ${textFont.variable} font-text antialiased`}>
+        <GoogleAnalytics gaId={GA_ID} />
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
