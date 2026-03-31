@@ -4,9 +4,33 @@ import { brands } from "@/lib/data-brands";
 import Headline from "@/components/ui/Headline";
 
 export default function BrandsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "SAYA GROUP Portfolio",
+    "description": "A curated collection of hospitality, coffee, and luxury stay brands by Saya Group.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": brands.map((brand, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": brand.slug === 'goasaya' ? "Restaurant" : brand.slug === 'nemusaya' ? "Villa" : "LocalBusiness",
+          "name": brand.name,
+          "url": `https://sayagroup.id/brands/${brand.slug}`,
+          "image": brand.image // Ensure your data-brands has an image field
+        }
+      }))
+    }
+  };
 
   return (
     <main className="">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <Headline
         title="Our Brands"
         breadcrumbs={[
@@ -19,7 +43,7 @@ export default function BrandsPage() {
         {brands.map((brand) => (
           <Link
             key={brand.id}
-            href={`/${brand.slug}`}
+            href={`/brands/${brand.slug}`}
             className="group block rounded-md overflow-hidden"
           >
             <div className="relative h-72 bg-gray-100">

@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     default: "Saya Group | Hospitality & Lifestyle Group",
     template: "%s | Saya Group",
   },
-  description:
-    "Saya Group is a hospitality-driven lifestyle company based in Jakarta, operating premium brands across dining, coffee, nightlife, craftsmanship, and luxury stays.",
+  description:"Saya Group is a hospitality-driven lifestyle company based in Jakarta, operating premium brands across dining, coffee, nightlife, craftsmanship, and luxury stays.",
   applicationName: "Saya Group",
   keywords: [
     "Saya Group", "Hospitality Group Jakarta", "Lifestyle Group Indonesia",
@@ -36,7 +35,6 @@ const styleFont = Quicksand({
   variable: "--font-style",
   subsets: ["latin"],
 });
-
 
 const textFont = Spline_Sans({
   variable: "--font-text",

@@ -1,4 +1,3 @@
-
 export type BrandEvent = {
   id: string;
   title: string;
@@ -47,7 +46,7 @@ export const brands: Brand[] = [
     image: "/brands/goasaya/main.jpeg",
     logo: "/brands/goasaya/logo-white.png",
     location: "Jakarta, Indonesia",
-    website: "https://goasaya.com",
+    website: "https://www.goasaya.com",
 
     events: [
       // {
@@ -72,7 +71,7 @@ export const brands: Brand[] = [
       socials: {
         instagram: "https://instagram.com/goasaya.jkt",
         tiktok: "https://tiktok.com/goasaya.jkt",
-        website: "https://goasaya.com",
+        website: "https://www.goasaya.com",
       },
       rsvp: "https://booking.chope.co/booking_index?rid=goasayarestaurant2511jkt&source=rest_website_goasayarestaurant&adults=2&lang=en_US&country_code=JAKARTA",
     },
@@ -134,7 +133,7 @@ export const brands: Brand[] = [
     image: "/brands/nemusaya/villa1.jpg",
     logo: "/brands/nemusaya/nemusaya.webp",
     location: "Bali, Indonesia",
-    website: "https://nemusaya.com",
+    website: "https://www.nemusaya.com",
 
     events: [
       // {
@@ -156,10 +155,10 @@ export const brands: Brand[] = [
       address: "Bali",
       contactPerson: "+62 877 5566 8899",
       socials: {
-        instagram: "https://instagram.com/nemusaya",
-        website: "https://nemusaya.com",
+        instagram: "https://instagram.com/nemusayavillas",
+        website: "https://www.nemusaya.com",
       },
-      rsvp: "https://nemusaya.com/booking",
+      rsvp: "https://www.nemusaya.com/booking",
     },
   },
 
@@ -176,7 +175,7 @@ export const brands: Brand[] = [
     image: "/brands/aromabiji/full-product.jpeg",
     logo: "/brands/aromabiji/logo.png",
     location: "Indonesia",
-    website: "https://aromabiji.com",
+    website: "https://aromabiji.co",
 
     events: [
       // {

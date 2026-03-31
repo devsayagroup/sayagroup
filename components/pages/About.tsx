@@ -7,7 +7,6 @@ import { useRef } from "react";
 export default function AboutClient() {
   const reduceMotion = useReducedMotion();
 
-  // Parallax for hero media
   const heroRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress: heroProgress } = useScroll({
     target: heroRef,
@@ -35,7 +34,6 @@ export default function AboutClient() {
         ref={heroRef as any}
         className="relative overflow-hidden border-b border-neutral-200"
       >
-        {/* Soft luxury background */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-neutral-100 blur-3xl opacity-70" />
           <div className="absolute -bottom-48 right-[-120px] h-[520px] w-[520px] rounded-full bg-neutral-50 blur-3xl opacity-90" />
@@ -43,7 +41,6 @@ export default function AboutClient() {
 
         <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="grid items-center gap-24 md:grid-cols-2">
-            {/* Copy */}
             <motion.div
               initial="hidden"
               whileInView="show"
@@ -75,7 +72,6 @@ export default function AboutClient() {
                 shaped by its own character and a shared commitment to quality and design.
               </p>
 
-              {/* subtle CTA row (optional) */}
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href="/brands"
@@ -93,14 +89,12 @@ export default function AboutClient() {
               </div>
             </motion.div>
 
-            {/* Hero Media w/ Parallax */}
             <motion.div
               style={{ y: heroY, scale: heroScale }}
               className="relative"
               aria-hidden="true"
             >
               <div className="relative aspect-[6/5] w-full overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 shadow-[0_18px_60px_-30px_rgba(0,0,0,0.35)]">
-                {/* Replace with your own luxury hero image */}
                 <Image
                   src="/brands/onepercent/inner-circle.png"
                   alt="Saya Group — hospitality and lifestyle"
@@ -109,7 +103,6 @@ export default function AboutClient() {
                   priority
                 />
 
-                {/* Luxury glass label */}
                 <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-5 py-4 text-white">
                   <div className="flex items-center justify-between gap-4">
                     <div>
@@ -259,74 +252,70 @@ export default function AboutClient() {
         </div>
       </section> */}
 
-        <section className="relative overflow-hidden bg-neutral-950 text-white py-20 md:py-24">
-            {/* ===== BACKGROUND PATTERN ===== */}
-            <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
-                <svg
-                className="w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <defs>
-                    <pattern
-                    id="cta-pattern"
-                    x="0"
-                    y="0"
-                    width="64"
-                    height="64"
-                    patternUnits="userSpaceOnUse"
-                    >
-                    <path
-                        d="M64 0H0V64"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="0.5"
-                    />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#cta-pattern)" />
-                </svg>
-            </div>
+      <section className="relative overflow-hidden bg-neutral-950 text-white py-20 md:py-24">
+          <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
+              <svg
+              className="w-full h-full"
+              xmlns="http://www.w3.org/2000/svg"
+              >
+              <defs>
+                  <pattern
+                  id="cta-pattern"
+                  x="0"
+                  y="0"
+                  width="64"
+                  height="64"
+                  patternUnits="userSpaceOnUse"
+                  >
+                  <path
+                      d="M64 0H0V64"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="0.5"
+                  />
+                  </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#cta-pattern)" />
+              </svg>
+          </div>
 
-            {/* ===== SOFT LIGHT BLOBS ===== */}
-            <div className="pointer-events-none absolute inset-0">
-                <div className="absolute left-[-120px] top-[-140px] h-[520px] w-[520px] rounded-full bg-white/5 blur-3xl" />
-                <div className="absolute right-[-180px] bottom-[-180px] h-[620px] w-[620px] rounded-full bg-white/5 blur-3xl" />
-            </div>
+          <div className="pointer-events-none absolute inset-0">
+              <div className="absolute left-[-120px] top-[-140px] h-[520px] w-[520px] rounded-full bg-white/5 blur-3xl" />
+              <div className="absolute right-[-180px] bottom-[-180px] h-[620px] w-[620px] rounded-full bg-white/5 blur-3xl" />
+          </div>
 
-            {/* ===== CONTENT ===== */}
-            <div className="relative mx-auto max-w-4xl px-6 md:px-10 lg:px-12 text-center">
-                <motion.div
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.4 }}
-                variants={fadeUp}
-                >
-                <p className="text-xs tracking-[0.28em] uppercase text-white/60">
-                    Looking Forward
-                </p>
+          <div className="relative mx-auto max-w-4xl px-6 md:px-10 lg:px-12 text-center">
+              <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={fadeUp}
+              >
+              <p className="text-xs tracking-[0.28em] uppercase text-white/60">
+                  Looking Forward
+              </p>
 
-                <h2 className="mt-4 text-3xl md:text-4xl font-light">
-                    Building brands with long-term value
-                    <br className="hidden md:block" />
-                    and cultural relevance.
-                </h2>
+              <h2 className="mt-4 text-3xl md:text-4xl font-light">
+                  Building brands with long-term value
+                  <br className="hidden md:block" />
+                  and cultural relevance.
+              </h2>
 
-                <p className="mt-7 text-lg text-white/70 leading-relaxed">
-                    As Saya Group continues to grow, our focus remains the same:
-                    creating thoughtful experiences that enrich how people dine,
-                    gather, and live while building brands with lasting quality
-                    and intentional design.
-                </p>
+              <p className="mt-7 text-lg text-white/70 leading-relaxed">
+                  As Saya Group continues to grow, our focus remains the same:
+                  creating thoughtful experiences that enrich how people dine,
+                  gather, and live while building brands with lasting quality
+                  and intentional design.
+              </p>
 
-                <div className="mt-10 flex items-center justify-center gap-3 text-sm text-white/60">
-                    <span className="h-[1px] w-10 bg-white/20" />
-                    <span>Hospitality • Lifestyle • Craft</span>
-                    <span className="h-[1px] w-10 bg-white/20" />
-                </div>
-                </motion.div>
-            </div>
-            </section>
-
+              <div className="mt-10 flex items-center justify-center gap-3 text-sm text-white/60">
+                  <span className="h-[1px] w-10 bg-white/20" />
+                  <span>Hospitality • Lifestyle • Craft</span>
+                  <span className="h-[1px] w-10 bg-white/20" />
+              </div>
+              </motion.div>
+          </div>
+        </section>
     </main>
   );
 }

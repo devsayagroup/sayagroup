@@ -119,7 +119,7 @@ export default function BrandSection() {
 
 function BrandCard({ brand }: any) {
   return (
-    <Link href={`/${brand.slug}`} className="group block">
+    <Link href={`/brands/${brand.slug}`} className="group block">
       <div className="relative overflow-hidden rounded-xl border border-neutral-200 bg-black shadow-[0_18px_60px_-40px_rgba(0,0,0,0.55)]">
         <div className="relative h-[420px]">
           <Image
