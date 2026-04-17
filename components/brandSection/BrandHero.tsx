@@ -47,30 +47,14 @@ type Props = { brand: Brand };
 export default function BrandHero({ brand }: Props) {
   return (
     <section className="relative w-full h-[70vh] overflow-hidden">
-
-      {/* Background */}
-        {/* <Image
-        src={brand.image}
-        alt={brand.name}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-        unoptimized
-        /> */}
-
-        <Image
+      <Image
         src={brand.image}
         alt={brand.name}
         fill
         priority
         unoptimized
         className="object-cover object-center"
-        />
-
-
-
-      {/* Logo */}
+      />
       <div className="absolute inset-0 flex items-center justify-center">
         {brand.logo && (
           <Image
@@ -83,7 +67,6 @@ export default function BrandHero({ brand }: Props) {
           />
         )}
       </div>
-
     </section>
   );
 }

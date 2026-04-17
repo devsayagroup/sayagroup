@@ -4,6 +4,7 @@ type Props = {
   brand: any;
 };
 
+
 export default function BrandAbout({ brand }: Props) {
   return (
     <section className="bg-gray-200 px-6 py-18 text-center">
