@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { brands } from "@/lib/data-brands";
+import { events } from "@/lib/data-events";
 
 import BrandHero from "@/components/brandSection/BrandHero";
 import BrandAbout from "@/components/brandSection/BrandAbout";
@@ -35,12 +36,16 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function BrandPage({ params }: Props) {
+export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   
+  // 1. Find the Brand
   const brand = brands.find((b) => b.slug === slug);
-
   if (!brand) return notFound();
+
+  // 2. Filter the Events Database using the Brand's ID
+  // Make sure event.brandId matches brand.id exactly
+  const brandEvents = events.filter((event) => event.brandId === brand.id);
 
   const schemaType = 
     brand.slug === 'goasaya' ? "Restaurant" : 
@@ -91,7 +96,7 @@ export default async function BrandPage({ params }: Props) {
       <div className="w-full">
         <BrandHero brand={brand} />
         <BrandAbout brand={brand} />
-        <BrandEvents brand={brand} />
+        <BrandEvents events={brandEvents} brandName={brand.name} />        
         <BrandGallery brand={brand} />
         <BrandContact brand={brand} />
         <BrandAnother allBrands={brands} currentSlug={slug} />
@@ -99,3 +104,4 @@ export default async function BrandPage({ params }: Props) {
     </>
   );
 }
+
