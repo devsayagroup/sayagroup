@@ -33,9 +33,6 @@ export type Brand = {
 };
 
 export const brands: Brand[] = [
-  /* ============================
-    GOASAYA
-  ============================ */
   {
     id: "goasaya",
     name: "GoaSaya",
